@@ -25,7 +25,7 @@ router.get("/list", (req, res) => {
 
 router.post("/item", (req, res) => {
   console.log("POST '/item' body: " + JSON.stringify(req.body));
-  items.push(req.body);
+  items.push(req.body.item);
   res.status(201).json(items);
 });
 
